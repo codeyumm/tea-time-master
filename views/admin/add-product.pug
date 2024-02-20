@@ -1,0 +1,42 @@
+extends ../shared/layout
+
+block main-content
+    main#add-item.content-wrapper
+
+        h1 Add item to menu
+
+        form#add-item-form(action="add-product", method="POST")
+
+            .input-field-container
+                label(for="itemTitle") item Title : 
+                input(type='text', name='title', id='itemTitle')
+
+            .input-field-container
+                label(for="itemDesc") Description : 
+                textarea(name="description", cols="30", rows="3", id='itemDesc') 
+                //- input(type='text', name='itemDesc', id='itemDesc') 
+
+            .input-field-container
+                label(for="price") Price : 
+                input(type='number', name='price', id='itemPrice')
+                
+            .input-field-container
+                label(for="itemCategory") Add category
+                select(name="category", id="itemCategory")
+                    each category in categories
+                        option(value=category.name) #{category.name} 
+
+            
+            .input-field-container
+                label(for="popularItem") Add to popular list?
+                select(name="isPopular", id="popularItem")
+                    option(value="false") No 
+                    option(value="true") Yes
+
+            .input-field-container
+                label(for="image") Image : 
+                input(type='text', name='image', id='image', placeholder='Paste link of hosted image')
+
+            .input-field-container
+                input(type="submit", value="Add item to menu")
+

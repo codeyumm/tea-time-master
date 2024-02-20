@@ -1,0 +1,24 @@
+extends ../shared/layout
+
+block append styleSheets
+    link(rel="stylesheet", href="/css/dashboard.css")
+
+block append scripts
+    script(src="/js/dashboard.js") 
+
+block main-content
+    main.content-wrapper#dashboard
+        h1 Admin Dashboard
+
+
+        .stats-container
+            h2.stat-label Total Item - #{itemsCount}
+            h2.stat-label Total Tea - #{hotTeaCount}
+            h2.stat-label Total Ice Tea - #{iceTeaCount}
+            h2.stat-label Total Snacks - #{snacksCount}
+            h2.stat-label Total Popular items - #{popularItemsCount}
+
+
+        .add-item-container 
+                form(action="/admin/add-product", method="get")
+                    input(type="submit", value="Add a new item in menu") 

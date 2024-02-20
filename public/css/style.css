@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* --------------------------------
+
+    1. CSS Variables 
+    2. Global style (default)
+    3. Style for header
+    4. Style for popular item 
+    5. Style footer 
+    6. Style which is used by multiple pages
+    7. style for index page
+    8. Style for main section of index
+    9. Style for menu page
+    10. Dashboard style
+    11. add-product page style
+    12. Media queires for tablet and mobile
+
+ -------------------------------- */
+
+
+/* 1. css variables */
+:root{
+    --primary-color: #266E7A;
+    --secodary-color: #FFFFFF;
+    --primary-text: #1E5862;
+    --secondary-text: #F5F5F5;
+    --primary-btn: #0D3B47;
+}
+
+/* 2, some global css style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 1em;
+}
+
+body{
+    /* background-color: var(--primary-color); */
+    background-color: #E9F1F2;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.content-wrapper{
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+
+input[type=submit]{
+    width: 200px;
+    background-color: var(--primary-btn);
+    border: none;
+    padding: 8px 12px;
+    color: var(--secodary-color);
+    font-size: 1.25em;
+    border-radius: 8px;
+    border: 2px solid var(--primary-btn);
+    font-weight: 500;
+
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    border: 2px solid var(--primary-btn);
+    color: var(--primary-btn);
+    background-color: var(--secodary-color);
+}
+
+.custom-cursor{
+    cursor: url('../images/happy-cursor.png'),auto;
+}
+
+
+/* 3. style for header */
+header{
+    background-color: var(--primary-color);
+    height: 68px;
+    padding: 0 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Pacifico', monospace;
+    font-size: 2em;
+    color: var(--secondary-text);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 42px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+nav a{
+    position: relative;
+}
+
+nav a:hover{
+    border-bottom: 3px solid var(--secondary-text);
+    transition: 2ms ease;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* 4. style for second page */
+
+#popular-items{
+    /* height: 100vh; */
+    background: rgb(38,110,122);
+    background: linear-gradient(180deg, rgba(38,110,122,1) 0%, rgba(184,211,217,1) 100%);
+}
+
+
+/* 5. style for footer */
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(184,211,217,1);
+    flex-direction: column;
+}
+
+footer p{
+    color: var(--primary-btn)
+}
+  
+
+
+/* 6. Style which is used by multiple pages */
+.items-container{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.item-container{
+    max-width: 320px;
+}
+
+.item-title{
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+}
+
+.item-image{
+    width: 300px;
+    height: 380px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* 7. style for index page  */
+#index{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    background-color: white;
+    padding-left: 42px;
+}
+
+.hero-text{
+    color: var(--primary-text);
+}
+
+.hero-text h1{
+    font-family: 'Playfair display', monospace;
+    font-size: 6em;
+}
+
+.hero-text p{
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.hero-image{
+    height: 100%;
+    position: relative;
+}
+
+.img-small-screen{
+    display: none;
+}
+
+.bg-block{
+    background-color: var(--primary-color);
+    
+    height: 100%;
+    width: 380px;
+    position: relative;
+}
+
+.hero-image img{
+    height: 460px;
+    width: 460px;
+    position: absolute;
+    top: 22%;
+    right: 40%;
+}
+
+.hero-text input{
+    margin-top: 24px;
+}
+
+.popular-items-container{
+    justify-content: center;
+}
+
+/* 8. Style for main section of index */
+#popular-items{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px;
+}
+
+
+.section-heading{
+    font-size: 1.8em;
+    font-family: 'Playfair display', monospace;
+    color: var(--secondary-text);
+}
+
+/* 9. Style for menu page */
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    /* background-color: #e9f1f2; */
+    background-color: whitesmoke;
+}
+
+#menu h1, #menu h2{
+    color: var(--primary-text);
+    font-family: "Playfair display", monospace;
+}
+
+#menu h1{
+    font-size: 2.2em;
+}
+
+#menu h2{
+    font-size: 2em;
+}
+
+
+.menu-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 24px;
+    padding: 0px 80px;
+}
+
+.menu-item-container h3{
+    color: #452915;
+}
+
+.menu-item-container p{
+    color: #593A28;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+
+
+
+
+/* 10. Dashboard style */
+#dashboard{
+    height: 80vh;
+    
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* background-color: #e9f1f2; */
+    background-color: whitesmoke;
+}
+
+#dashboard h1{
+    color: var(--primary-text);
+}
+
+
+
+.add-item-container input{
+    width: fit-content;
+}
+
+
+/* 11. add-product page style */
+#add-item{
+    background-color: #e9f1f2;
+    height: 80vh;
+}
+
+#add-item h1{
+    color: var(--primary-text);
+    padding: 60px 24px;
+}
+
+#add-item-form{
+    padding: 0px 48px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    min-width: 400px;
+    max-width: 620px;
+
+}
+
+
+
+.input-field-container input, .input-field-container textarea{
+    width: 320px;
+}
+
+#add-item-form select{
+    height: fit-content;
+    padding: 2px 2px;
+    width: 320px;
+
+}
+
+.input-field-container{
+    display: flex;
+    gap: 12px;
+}
+
+.input-field-container label{
+    width: 120px;
+}
+
+/* media queries */
+
+/* for hero image and text only */
+@media all  and (min-width: 780px)  and (max-width: 1200px){ 
+    .hero-text h1{
+        font-family: 'Playfair display', monospace;
+        font-size: 5em;
+    }
+    .items-container{
+        justify-content: center;
+    }
+
+    .hero-text p{
+        font-weight: 400;
+        font-size: 1.6em;
+    }
+
+    .hero-text{
+        margin-left: 20px;
+    }
+    .hero-image img{
+        height: 360px;
+        width: 360px;
+        position: absolute;
+        top: 22%;
+        right: 10%;
+    }
+
+    .bg-block{
+        background-color: var(--primary-color);
+        
+        height: 100%;
+        width: 240px;
+        position: relative;
+    }
+
+    .hero-image{
+        height: 100%;
+        position: relative;
+    }
+}
+
+/* for tablet */
+
+@media all  and (max-width: 768px) { 
+
+    body{
+        font-size: 0.9em;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    #index{
+        padding-left: 0px;
+        height: 100%;
+        padding-bottom: 24px;
+    }
+ 
+    #nav-menu{
+        position: absolute;
+        /* left: 0; */
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    #nav-menu li{
+        margin: 16px 0;
+    }
+
+    #nav-menu.active{
+        left: 0;
+    }
+
+    
+
+    .menu-item-container{
+        align-items: center;
+    }
+
+    .menu-item-container h2{
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        color: white !important;
+    }
+
+    .items-container{
+        justify-content: center;
+    }
+
+    .item-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* hero section style */
+
+    #index{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-small-screen{
+        height: 320px;
+        width: 320px;
+        display: block;
+    }
+
+    .hero-text{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text h1{
+        font-size: 3em;
+    }
+
+    .hero-text p{
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    /* home page style */
+    .hero-image{
+        display: none;
+    }
+
+    #add-item{
+        height: auto;
+    }
+
+    #add-item-form label{
+
+        font-size: 1.5em;
+    }
+
+    #add-item-form{
+        padding-bottom: 32px;
+    }
+
+    .input-field-container{
+        flex-direction: column;
+    }
+
+    .input-field-container label{
+        width: max-content;
+    }
+
+    .input-field-container input, .input-field-container textarea{
+        width: 0px;
+    }
+    
+
+    .input-field-container input,  .input-field-container textarea{
+        width: 90vw;
+        height: 42px;
+        font-size: 2em;
+    }
+
+    #add-item-form select{
+        height: 42px;
+        width: 90vw;
+
+    }
+
+    
+    .section-heading h2{
+        color: var(--secondary-text);
+        background-color: var(--primary-btn);
+        width: 100%;
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 1.3em;
+    }
+
+
+}
+
+/* for mobile */
+
+@media all  and (max-width: 480px) {
+    body{
+        font-size: 0.8em;
+    }
+
+
+    .item-image{
+        width: 240px;
+        height: 320px;
+        border-radius: 12px;
+        object-fit: contain;
+    }
+
+    #add-item-form{
+        padding: 0px 12px;
+    }
+    
+
+    
+    .img-small-screen{
+        height: 220px;
+        width: 220px;
+        display: block;
+    }
+
+
+    .hero-text p{
+        width: 90%;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+
+    .section-heading h2{
+        font-size: 1em;
+    }
+
+    #add-item-form{
+        margin-bottom: 24px;
+    }
+}

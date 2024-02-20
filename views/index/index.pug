@@ -1,0 +1,51 @@
+extends ../shared/layout
+
+block append styleSheets
+
+
+block main-content
+    main.content-wrapper#index
+        .hero-text
+            h1 Tea Time
+            img(src="/images/hero-tea-cup.png", alt="Image of tea", title="Blue cup of tea with chai in it").img-small-screen
+            p We don't want people to have just 'a'
+            p Chai; we want people to have 'THE' Chai.
+            form(action="/menu", method="get")
+                input(type="submit", value="Explore Menu") 
+ 
+
+        .hero-image
+            .bg-block
+                img(src="/images/hero-tea-cup.png", alt="Image of tea", title="Blue cup of tea with chai in it")
+            
+        
+    section#popular-items.content-wrapper
+        .section-heading
+            h2#sec-heading Popular items
+        .items-container.popular-items-container
+            .item-container
+                img(src="/images/tea-one.jpg", alt="", srcset="").item-image
+                h3.item-title Masala Chai
+                p.item-desc Chai made with Indian spieces, milk and ginger
+                a(href="#") See more
+            .item-container
+                img(src="/images/tea-two.jpg", alt="", srcset="").item-image
+                h3.item-title Kesar Chai
+                p.item-desc Chai made with milk and kesar
+                a(href="#") See more
+            .item-container
+                img(src="/images/tea-three.jpg", alt="", srcset="").item-image
+                h3.item-title Kesar Chai
+                p.item-desc Chai made with milk and kesar
+                a(href="#") See more 
+
+            
+
+
+//- image credits
+//- Photo by "https://unsplash.com/@relentlessjpg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ben Moreland</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-brown-liquid-on-brown-wooden-table-eSzClaMXNkk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+//- Photo by <a href="https://unsplash.com/@fauzanazhima?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fauzan</a> on <a href="https://unsplash.com/photos/clear-glass-cup-on-brown-slab-WoJTrgm-Mkw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+//- Photo by <a href="https://unsplash.com/@vdphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">VD Photography</a> on <a href="https://unsplash.com/photos/brown-cup-on-white-and-blue-ceramic-plate-HHM4Ejj0SCE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+//-   Photo by <a href="https://unsplash.com/@harshit_mahabale?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Harshit Mahabale</a> on <a href="https://unsplash.com/photos/a-person-holding-a-cup-of-tea-on-a-wooden-table-_w_9J1qJD9E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  

@@ -1,0 +1,112 @@
+extends ../shared/layout
+
+
+block main-content
+    main.content-wrapper#menu
+        h1 Menu
+ 
+        .menu-item-container
+            
+            - let c = 0;
+            each category in categories
+                h2.menu-item-title #{category.name}
+                - let x = itemsByCategory[category.name]
+ 
+                .items-container
+                    each i in x
+                        .item-container
+                            img(src=i.image, alt="", srcset="").item-image
+                            h3.item-title #{i.title}
+                            p.item-desc #{i.description}
+                            p.item-price $#{i.price}
+                
+            
+
+
+            //- h2.menu-item-title Hot Tea
+
+            //- .items-container
+            //-     .item-container
+            //-         img(src="/images/tea-one.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Masala Chai
+            //-         p.item-desc Chai made with Indian spieces, milk and ginger
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
+            //-         //- a(href="#") See more 
+
+            //- h2.menu-item-title Ice tea
+
+            //- .items-container.ice-tea-container
+            //-     .item-container
+            //-         img(src="/images/ice-tea-one.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Lemon Ice Tea
+            //-         p.item-desc Simple lemon ice tea
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
+            //-         //- a(href="#") See more 
+
+
+            //- h2.menu-item-title Snacks
+
+            //- .items-container.ice-tea-container
+            //-     .item-container
+            //-         img(src="/images/hot-snack-samosa.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Samosa
+            //-         p.item-desc Samosa with filling of potato and peas.
+            //-         p.item-price $2.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-two.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Kesar Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $3.5
+            //-         //- a(href="#") See more
+            //-     .item-container
+            //-         img(src="/images/ice-tea-three.jpg", alt="", srcset="").item-image
+            //-         h3.item-title Elachi Chai
+            //-         p.item-desc Chai made with milk and kesar
+            //-         p.item-price $2.5   
+                    //- a(href="#") See more 
+        
+//- Photo by <a href="https://unsplash.com/@picoftasty?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mae Mu</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-tea-kbch-i63YTg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+//- Photo by <a href="https://unsplash.com/@trine?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Katrin Hauf</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-sliced-lemon-weB2PvbQrnY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+//- Photo by <a href="https://unsplash.com/@jaydensimm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jayden Sim</a> on <a href="https://unsplash.com/photos/cup-of-ice-cream-OINDTAHGjrc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+//- Photo by <a href="https://unsplash.com/@sundaymonday_gurung?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sanju M Gurung</a> on <a href="https://unsplash.com/photos/person-holding-brown-bread-with-brown-cream-RpodKouwdCM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+//- https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+//- https://images.unsplash.com/photo-1499638673689-79a0b5115d87?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+//- https://images.unsplash.com/photo-1596450512748-2dae774fc38a?q=80&w=995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+//- https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+//- https://images.unsplash.com/photo-1572099107898-46f22b3af4f9?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+//- <img class="item-image" src="https://unsplash.com/photos/clear-drinking-glass-with-sliced-lemon-weB2PvbQrnY?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash" alt="" srcset="">
+//- <a href="https://www.flaticon.com/free-icons/happy" title="happy icons">Happy icons created by Eucalyp - Flaticon</a>
+//- <a href="https://www.flaticon.com/free-icons/hungry" title="hungry icons">Hungry icons created by justicon - Flaticon</a>

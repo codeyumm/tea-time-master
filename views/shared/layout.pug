@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block styleSheets
+            link(rel="stylesheet", type="text/css", href="/css/style.css")
+        block scripts
+            script(src="/js/script.js") 
+            
+        title Document
+    body
+        header.content-wrapper
+            div.logo
+                a(href="/") Tea Time
+            nav
+                ul#nav-menu
+                    li
+                        a(href="/menu") Menu
+                    li 
+                        a(href="#") About us
+                    li 
+                        a(href="/admin") Admin
+                
+                .hamburger
+                    span.bar 
+                    span.bar 
+                    span.bar 
+
+    // each page can have thier own content below after extending this layout
+    block main-content
+    footer.content-wrapper
+        div.logo Tea Time
+        p &copy; Design by Priyam Desai for HTTP5222 Assignment 1
+
